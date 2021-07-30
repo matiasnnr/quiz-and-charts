@@ -26,11 +26,6 @@ public class MusicController {
         return musicService.readMusics();
     }
 
-    @GetMapping(value = "charts")
-    public List<Chart> getChartData() {
-        return musicService.getChartData();
-    }
-
     @GetMapping(value = "readtypes")
     public List<Type> readTypesMusic() {
         return musicService.readTypesMusics();
@@ -50,4 +45,10 @@ public class MusicController {
     public String deleteMusic(@RequestBody Music music) {
         return musicService.deleteMusic(music);
     }
+
+    @GetMapping(value = "charts")
+    public List<Chart> getChartData() {
+        return musicService.getChartData();
+    }
+
 }
